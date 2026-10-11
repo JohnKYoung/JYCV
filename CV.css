@@ -1,0 +1,64 @@
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 4px;
+}
+
+/* Print Media Query Rules */
+@media print {
+    @page {
+        size: A4;
+        margin: 8mm 10mm 8mm 10mm;
+    }
+    body {
+        background: white !important;
+        color: #0f172a !important;
+        font-size: 10pt;
+        line-height: 1.35;
+        padding: 0 !important;
+    }
+    .no-print {
+        display: none !important;
+    }
+    .print-full-width {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+        border: none !important;
+    }
+    .print-grid {
+        display: grid !important;
+        grid-template-columns: 32% 68% !important;
+        gap: 0 !important;
+    }
+    .print-sidebar {
+        background-color: #064e3b !important;
+        color: #ffffff !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    .print-main {
+        background-color: #ffffff !important;
+        color: #0f172a !important;
+    }
+    .print-badge {
+        border: 1px solid #cbd5e1 !important;
+        background-color: #f8fafc !important;
+        color: #0f172a !important;
+    }
+    .print-border {
+        border-color: #cbd5e1 !important;
+    }
+    a {
+        text-decoration: none !important;
+        color: inherit !important;
+    }
+}

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Young - Software Test Engineer | CV</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    <!-- External Custom CSS -->
+    <link rel="stylesheet" href="CV.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Inter"', 'sans-serif'],
+                        heading: ['"Plus Jakarta Sans"', 'sans-serif']
+                    },
+                    colors: {
+                        sidebar: '#064e3b', // Deep dark green (#064e3b)
+                        sidebarHover: '#043e2f',
+                        emeraldAccent: '#059669',
+                        emeraldLight: '#d1fae5',
+                        paleGreen: '#f0fdf4' // Pale green background for main content pane
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased min-h-screen py-6 sm:py-10 px-3 sm:px-6">
+
+    <!-- Top Action Bar (hidden when printing) 
+    <div class="no-print max-w-5xl mx-auto mb-6 flex flex-wrap items-center justify-between gap-4 bg-slate-900/90 backdrop-blur-md p-4 rounded-xl border border-slate-800 shadow-xl">
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
+                <i class="fa-solid fa-file-contract text-lg"></i>
+            </div>
+            <div>
+                <h2 class="font-heading font-bold text-white text-sm">John Young — Interactive Resume</h2>
+                <p class="text-xs text-slate-400">Software Test Engineer</p>
+            </div>
+        </div>
+
+        <div class="flex items-center gap-2">
+            <!- - Copy Contact Info Button - ->
+            <button onclick="copyContactInfo()" class="px-3.5 py-2 text-xs font-semibold rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition flex items-center gap-2">
+                <i class="fa-solid fa-copy text-emerald-400"></i>
+                <span id="copyBtnText">Copy Contact</span>
+            </button>
+
+            <!- - Print to PDF Button - ->
+            <button onclick="window.print()" class="px-4 py-2 text-xs font-bold rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-950 shadow-lg shadow-emerald-500/20 transition flex items-center gap-2">
+                <i class="fa-solid fa-print"></i>
+                <span>Print / Save PDF</span>
+            </button>
+        </div>
+    </div> -->
+
+    <!-- Main Resume Card -->
+    <main class="max-w-5xl mx-auto bg-slate-900 border border-slate-800 rounded-2xl shadow-2xl overflow-hidden print-full-width">
+        
+        <div class="grid grid-cols-1 md:grid-cols-12 print-grid">
+            
+            <!-- Left Pane: Dark Green Sidebar -->
+            <aside class="md:col-span-4 bg-[#064e3b] text-emerald-50 p-6 sm:p-8 flex flex-col justify-between print-sidebar">
+                <div class="space-y-7">
+                    
+                    <!-- Profile Portrait & Header -->
+                    <div class="text-center sm:text-left flex flex-col items-center sm:items-start">
+                        
+                        <!-- Embedded Photo Frame -->
+                        <div class="relative mb-5 group">
+                            <div class="w-32 h-32 sm:w-36 sm:h-36 rounded-full p-1 bg-gradient-to-tr from-emerald-400 via-teal-300 to-emerald-600 shadow-2xl shadow-emerald-950">
+                                <img src="./images/JY.webp" 
+                                     alt="John Young" 
+                                     class="w-full h-full object-cover object-top rounded-full border-2 border-[#064e3b] shadow-inner bg-emerald-900"
+                                     onerror="this.onerror=null; this.src='https://placehold.co/150x150/064e3b/ffffff?text=John+Young';">
+                            </div>
+                        </div>
+
+                        <h1 class="text-2xl sm:text-3xl font-heading font-extrabold text-white tracking-tight">John Young</h1>
+                        <p class="text-emerald-200 font-semibold text-sm mt-1">Software Test Engineer</p>
+                        
+                        <div class="mt-3 inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium bg-emerald-900/60 text-emerald-100 border border-emerald-400/30">
+                            <i class="fa-solid fa-location-dot text-emerald-300 text-[10px]"></i>
+                            <span>Malmö, Sweden</span>
+                        </div>
+                    </div>
+
+                    <!-- Contact Details -->
+                    <div class="space-y-3 pt-4 border-t border-emerald-700/60 text-xs">
+                        <h3 class="text-[11px] font-bold uppercase tracking-wider text-emerald-200/90 mb-2">Contact Info</h3>
+                        
+                        <a href="mailto:jky61@hotmail.com" class="flex items-center gap-3 text-emerald-100 hover:text-white transition group">
+                            <span class="w-8 h-8 rounded-lg bg-emerald-800/80 flex items-center justify-center text-emerald-300 shrink-0 group-hover:bg-emerald-700">
+                                <i class="fa-solid fa-envelope"></i>
+                            </span>
+                            <span class="truncate">jky61@hotmail.com</span>
+                        </a>
+
+                        <a href="tel:0709831364" class="flex items-center gap-3 text-emerald-100 hover:text-white transition group">
+                            <span class="w-8 h-8 rounded-lg bg-emerald-800/80 flex items-center justify-center text-emerald-300 shrink-0 group-hover:bg-emerald-700">
+                                <i class="fa-solid fa-phone"></i>
+                            </span>
+                            <span>070-983 13 64</span>
+                        </a>
+
+                        <div class="flex items-center gap-3 text-emerald-100">
+                            <span class="w-8 h-8 rounded-lg bg-emerald-800/80 flex items-center justify-center text-emerald-300 shrink-0">
+                                <i class="fa-solid fa-house"></i>
+                            </span>
+                            <span class="leading-tight">Davidshallstorg 7<br>21145 Malmö</span>
+                        </div>
+                    </div>
+
+                    <!-- Core Skills -->
+                    <div class="space-y-4 pt-4 border-t border-emerald-700/60">
+                        <h3 class="text-[11px] font-bold uppercase tracking-wider text-emerald-200/90">Core Skills</h3>
+                        
+                        <div>
+                            <p class="text-[11px] text-emerald-200/80 font-semibold mb-1.5">Testing Methods</p>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="px-2.5 py-1 rounded-md text-[11px] bg-emerald-900/80 text-emerald-100 border border-emerald-600/50 print-badge">System Testing</span>
+                                <span class="px-2.5 py-1 rounded-md text-[11px] bg-emerald-900/80 text-emerald-100 border border-emerald-600/50 print-badge">Software Validation</span>
+                                <span class="px-2.5 py-1 rounded-md text-[11px] bg-emerald-900/80 text-emerald-100 border border-emerald-600/50 print-badge">Operational Readiness</span>
+                                <span class="px-2.5 py-1 rounded-md text-[11px] bg-emerald-900/80 text-emerald-100 border border-emerald-600/50 print-badge">Non-Regression</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="text-[11px] text-emerald-200/80 font-semibold mb-1.5">Specializations</p>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="px-2.5 py-1 rounded-md text-[11px] bg-emerald-800 text-white font-medium border border-emerald-500/60 shadow-sm print-badge">WCAG Accessibility</span>
+                                <span class="px-2.5 py-1 rounded-md text-[11px] bg-emerald-800 text-white font-medium border border-emerald-500/60 shadow-sm print-badge">Defect Analysis</span>
+                                <span class="px-2.5 py-1 rounded-md text-[11px] bg-emerald-800 text-white font-medium border border-emerald-500/60 shadow-sm print-badge">Failover & Recovery</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="text-[11px] text-emerald-200/80 font-semibold mb-1.5">Tools & Technologies</p>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="px-2 py-0.5 rounded text-[11px] bg-emerald-900/80 text-emerald-100 border border-emerald-600/50 print-badge">Jira</span>
+                                <span class="px-2 py-0.5 rounded text-[11px] bg-emerald-900/80 text-emerald-100 border border-emerald-600/50 print-badge">Postman</span>
+                                <span class="px-2 py-0.5 rounded text-[11px] bg-emerald-900/80 text-emerald-100 border border-emerald-600/50 print-badge">SQL</span>
+                                <span class="px-2 py-0.5 rounded text-[11px] bg-emerald-900/80 text-emerald-100 border border-emerald-600/50 print-badge">XML</span>
+                                <span class="px-2 py-0.5 rounded text-[11px] bg-emerald-900/80 text-emerald-100 border border-emerald-600/50 print-badge">Firestore</span>
+                                <span class="px-2 py-0.5 rounded text-[11px] bg-emerald-900/80 text-emerald-100 border border-emerald-600/50 print-badge">Agile / Scrum</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Education & Languages -->
+                    <div class="space-y-4 pt-4 border-t border-emerald-700/60">
+                        <div>
+                            <h3 class="text-[11px] font-bold uppercase tracking-wider text-emerald-200/90 mb-1.5">Education</h3>
+                            <p class="text-xs font-bold text-white">HND Computer Studies & Info Systems</p>
+                            <p class="text-[11px] text-emerald-200/80">Farnborough College of Tech, UK (1985)</p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-[11px] font-bold uppercase tracking-wider text-emerald-200/90 mb-1.5">Languages</h3>
+                            <ul class="text-xs space-y-1 text-emerald-100">
+                                <li class="flex justify-between">
+                                    <span>English</span>
+                                    <span class="text-emerald-300 font-semibold">Native / Fluent</span>
+                                </li>
+                                <li class="flex justify-between">
+                                    <span>Swedish</span>
+                                    <span class="text-emerald-300 font-semibold">Very Good</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="pt-6 mt-6 border-t border-emerald-700/60 print:hidden text-[10px] text-emerald-300/70 text-center sm:text-left">
+                    
+                </div>
+            </aside>
+
+            <!-- Right Pane: Pale Green Main Content Background -->
+            <div class="md:col-span-8 p-6 sm:p-8 space-y-8 bg-[#f0fdf4] text-slate-800 print-main">
+                
+                <!-- Executive Profile Summary -->
+                <section>
+                    <h2 class="text-xs font-bold uppercase tracking-wider text-emerald-900 border-b border-emerald-200 pb-2 mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-user-check text-xs text-emerald-700"></i> Executive Profile
+                    </h2>
+                    <p class="text-slate-700 text-xs sm:text-sm leading-relaxed">
+                        Results-driven <strong class="text-slate-900">Software Test Engineer</strong> with extensive experience validating mission-critical software across <strong class="text-slate-900">Retail & e-Commerce, Social Insurance, and Air Traffic Control Systems</strong>. Proven expertise collaborating within Agile environments at major enterprises including IKEA, Försäkringskassan, and Luftfartsverket. Specialized in non-functional testing, system validation, integration failure recovery, and Web Content Accessibility Guidelines (WCAG).
+                    </p>
+                </section>
+
+                <!-- Work Experience Section -->
+                <section class="space-y-6">
+                    <h2 class="text-xs font-bold uppercase tracking-wider text-emerald-900 border-b border-emerald-200 pb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-briefcase text-xs text-emerald-700"></i> Work Experience
+                    </h2>
+
+                    <!-- Experience Item 1: IBM CIC -->
+                    <div class="space-y-3">
+                        <div class="flex flex-wrap items-baseline justify-between gap-1">
+                            <h3 class="text-base font-bold text-slate-900">Consultant Software Test Engineer</h3>
+                            <span class="text-xs font-semibold px-2.5 py-0.5 rounded bg-emerald-200/70 text-emerald-900 border border-emerald-300 print-badge">Aug 2016 – Jun 2024</span>
+                        </div>
+                        <p class="text-xs font-semibold text-emerald-800">IBM Client Innovation Center Malmö</p>
+
+                        <!-- Client 1.1: Försäkringskassan -->
+                        <div class="pl-3 border-l-2 border-emerald-500 space-y-2 mt-2">
+                            <p class="text-xs font-bold text-slate-900">Försäkringskassan (Karlskrona & Trelleborg) <span class="text-[11px] font-normal text-slate-600">| Mar 2023 – Apr 2024</span></p>
+                            <p class="text-xs text-slate-700 leading-relaxed">
+                                Contributed within an Agile delivery team updating public web applications for housing and parental benefits. Conducted rigorous accessibility testing against <strong class="text-slate-900">WCAG standards</strong> to guarantee smooth web interaction for users with varying disabilities.
+                            </p>
+                        </div>
+
+                        <!-- Client 1.2: IKEA -->
+                        <div class="pl-3 border-l-2 border-emerald-500 space-y-2 mt-3">
+                            <p class="text-xs font-bold text-slate-900">IKEA IT AB (Helsingborg) <span class="text-[11px] font-normal text-slate-600">| 2016 – 2021</span></p>
+                            <ul class="list-disc list-inside text-xs text-slate-700 space-y-1.5 leading-relaxed">
+                                <li><strong>Operational Readiness Testing:</strong> Validated software updates as part of IKEA's digital journey into large-scale e-Commerce.</li>
+                                <li><strong>System Reliability:</strong> Coordinated server and database failover/failback tests and integration recovery during order creation, ensuring zero transactional data loss.</li>
+                                <li><strong>Order Promise Team:</strong> Executed test cases for Lead Time Delivery and Slot Allocation modules using Postman, XML, Firestore, and SQL queries.</li>
+                                <li>Managed defect creation, tracking, and resolution cycles via Jira.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Experience Item 2: Luftfartsverket -->
+                    <div class="space-y-2 pt-3 border-t border-emerald-200 print-border">
+                        <div class="flex flex-wrap items-baseline justify-between gap-1">
+                            <h3 class="text-base font-bold text-slate-900">Air Traffic System Engineer</h3>
+                            <span class="text-xs font-semibold px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 border border-emerald-200 print-badge">Jun 2006 – May 2016</span>
+                        </div>
+                        <p class="text-xs font-semibold text-emerald-800">Swedish Civil Aviation Authority (Luftfartsverket) — Sweden</p>
+                        <ul class="list-disc list-inside text-xs text-slate-700 space-y-1.5 leading-relaxed pt-1">
+                            <li>Validated new software builds for the national Swedish Air Traffic Control System.</li>
+                            <li>Executed shadow testing in direct collaboration with operational Air Traffic Controllers.</li>
+                            <li>Analyzed operational defects daily, focusing on Medium Term Conflict Detection and Airspace Intrusion Warning systems.</li>
+                            <li>Managed non-regression testing cycles and co-authored official Software Verification Reports for regulatory approval by <i>Transportstyrelsen</i>.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Experience Item 3: Thales ATM -->
+                    <div class="space-y-2 pt-3 border-t border-emerald-200 print-border">
+                        <div class="flex flex-wrap items-baseline justify-between gap-1">
+                            <h3 class="text-base font-bold text-slate-900">Software Validation Engineer</h3>
+                            <span class="text-xs font-semibold px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 border border-emerald-200 print-badge">Jan 1997 – May 2006</span>
+                        </div>
+                        <p class="text-xs font-semibold text-emerald-800">Thales Air Traffic Management — UK & Worldwide</p>
+                        <p class="text-xs text-slate-700 leading-relaxed">
+                            Responsible for Factory and Site Acceptance Validation for mission-critical Air Traffic Management systems worldwide. Supported site validation at Malmö Airport (operational 2005), Skyguide (Switzerland), Guernsey, Dubai, Abu Dhabi, and EuroControl (Maastricht).
+                        </p>
+                    </div>
+
+                    <!-- Experience Item 4: Marconi -->
+                    <div class="pt-3 border-t border-emerald-200 print-border">
+                        <h4 class="text-xs font-bold text-slate-900">Software Engineer</h4>
+                        <p class="text-[11px] text-emerald-800 font-semibold">Marconi Command & Control Systems (1985 – 1997)</p>
+                        <p class="text-xs text-slate-700 mt-1">Designed, coded, and tested BATES defense software for UK Ministry of Defence.</p>
+                    </div>
+                </section>
+
+                <!-- Certifications Section -->
+                <section class="space-y-3 pt-2">
+                    <h2 class="text-xs font-bold uppercase tracking-wider text-emerald-900 border-b border-emerald-200 pb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-certificate text-xs text-emerald-700"></i> Key Certifications & Training
+                    </h2>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs">
+                        <div class="flex items-center gap-3 p-2.5 rounded-lg bg-white/80 border border-emerald-200 shadow-sm print-badge print-border">
+                            <i class="fa-solid fa-award text-amber-500 text-sm shrink-0"></i>
+                            <div>
+                                <p class="font-bold text-slate-900">Google Cloud Digital Adviser</p>
+                                <p class="text-[10px] text-slate-500">2021</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-3 p-2.5 rounded-lg bg-white/80 border border-emerald-200 shadow-sm print-badge print-border">
+                            <i class="fa-solid fa-award text-amber-500 text-sm shrink-0"></i>
+                            <div>
+                                <p class="font-bold text-slate-900">Licensed Scrum Master</p>
+                                <p class="text-[10px] text-slate-500">2020</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-3 p-2.5 rounded-lg bg-white/80 border border-emerald-200 shadow-sm print-badge print-border">
+                            <i class="fa-solid fa-award text-amber-500 text-sm shrink-0"></i>
+                            <div>
+                                <p class="font-bold text-slate-900">ISTQB Certified Tester (CTFL)</p>
+                                <p class="text-[10px] text-slate-500">2016 Foundation Level</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-3 p-2.5 rounded-lg bg-white/80 border border-emerald-200 shadow-sm print-badge print-border">
+                            <i class="fa-solid fa-award text-amber-500 text-sm shrink-0"></i>
+                            <div>
+                                <p class="font-bold text-slate-900">Complete Python Developer</p>
+                                <p class="text-[10px] text-slate-500">2020</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function copyContactInfo() {
+            const info = "John Young - Software Test Engineer\nEmail: jky61@hotmail.com\nPhone: 070-983 13 64\nLocation: Malmö, Sweden";
+            
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(info);
+            } else {
+                const textArea = document.createElement("textarea");
+                textArea.value = info;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+            }
+
+            const btnText = document.getElementById('copyBtnText');
+            btnText.textContent = "Copied!";
+            setTimeout(() => {
+                btnText.textContent = "Copy Contact";
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
